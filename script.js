@@ -30,9 +30,6 @@ function getComputerChoice(){
 }
 
 
-
-
-
 function playGame () {
     //Tell the program how to keep score
     let humanScore = 0;

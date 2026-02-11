@@ -1,0 +1,16 @@
+body {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    border-radius: 25%;
+}

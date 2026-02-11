@@ -14,9 +14,9 @@ function getComputerChoice(){
     return compChoice;
 }
 
+//Set the different variables, nodes, and send them to the DOM
 let humanScore = 0;
 let computerScore = 0;
-
 
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
@@ -24,7 +24,7 @@ const scissorsButton = document.querySelector(".scissors");
 
 const divScore = document.querySelector(".score");
 const divResult = document.querySelector(".results")
-const score = document.createElement("p");
+const score = document.createElement("p1");
 score.textContent = humanScore + " - " + computerScore;
 divScore.appendChild(score);
 
@@ -52,7 +52,7 @@ function playRound (humanChoice, computerChoice) {
     }
 }
 
-
+//Make the buttons run the playRound 
 rockButton.addEventListener("click", () => {
     divResult.removeChild(result);
     playRound("Rock", getComputerChoice());
@@ -74,6 +74,8 @@ scissorsButton.addEventListener("click", () => {
     score.textContent = humanScore + " - " + computerScore;
 } );
 
+
+//Finish the game when a button is pressed and the score of one of the players is 5
 const button = document.querySelectorAll("button.div");
 button.forEach(button => button.addEventListener('click', () => {
     if (humanScore === 5 || computerScore ===5) {
@@ -92,6 +94,8 @@ button.forEach(button => button.addEventListener('click', () => {
     }
 }));
 
+
+//Start over the game and set the score to 0
 const startOver = document.querySelector(".startOver");
 startOver.addEventListener("click", () => {
     if (divScore.contains(endGame)) {divScore.removeChild(endGame)} 
